@@ -42,7 +42,7 @@ The data files can be downloaded from `data/original/`.
 **domains.csv.zip**
   - `domain_id`: Unique identifier for the domain
   - `domain_name`: Short name for the domain
-  - `domain_description`: Brief description of the domain. For the complete description shown to participants at the beginning of each domain, please reference the `README.txt` file in each domain folder within `wisdom-of-crowds/domains/`.
+  - `domain_description`: The description shown to participants at the beginning of each domain
   - `knowledge_type`: One of "tacit"", "spatial reasoning"", "knowledge"", "pop culture", "prediction"
   - `media_type`: One of "video" "image", "audio", "none" 
   - `answer_type`: One of "discrete", "open-ended" 
@@ -77,15 +77,15 @@ Generating a clean dataset
 
 **data_processing.R**
   - Processes and combines responses, saving a clean dataset as an RData object
-  - Requirements: Uncompressed files in `data/original_data.tar.gz` (5 files) should be saved in the `data/` folder
-  - Libraries: `base`, `dplyr`
+  - Requirements: Data files in `data/original/` (5 files)
+  - Libraries: `base`, `dplyr`, `readr`
   - Output: saves `crowd.RData` in `data/`
   
   
 Media files
 -----------------------------------------
 
-Some domains included additional media files (e.g., a video, image) that were shown to respondents. The path to each file by question and domain can be found in `data/original/tasks.csv.zip`, and all media files can be found in the `domains/` folder.
+Some domains included additional media files (e.g., a video, image) that were shown to respondents. The path to the file for each question can be found in `data/original/tasks.csv.zip` (see `path_to_media` field), and all media files can be found in the `domains/` folder.
 
 
 Additional notes
